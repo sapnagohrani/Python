@@ -1,15 +1,16 @@
 def bfs(graph, vertex):
     visited = {vertex: True}
     queue = [vertex]
+    level = {vertex: 0}
 
     while queue:
         v = queue.pop(0)
         for n in graph[v]:
             if n not in visited:
                 queue.append(n)
-                print(queue)
                 visited[n] = True
-    return visited
+                level[n] = level[v]+1
+    return visited, level
 
 
 star = {
@@ -20,5 +21,6 @@ star = {
     'E': set(['A', 'B']),
 }
 
-traversed_vertices = bfs(star, 'A')
+traversed_vertices, distance = bfs(star, 'A')
 print(traversed_vertices)
+print(distance)
