@@ -2,7 +2,7 @@ def binary_search(array, key, low, high):
     if array != sorted(array):
         print('List should be sorted')
         return -1
-    if high>=low:
+    if high >= low:
         mid = (low + high) // 2
         if array[mid] == key:
             return mid
