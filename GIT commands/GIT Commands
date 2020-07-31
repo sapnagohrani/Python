@@ -1,0 +1,24 @@
+Git Commands
+
+git clone -> To add repository to our local
+git status -> status of all the files
+git add filename/. -> Add untracke file to git ('.' is used to add ALL the untracked files)
+git commit -m "Message while doing commit" -m "Description regarding commit" -> m stands for message
+git push -> push the commit code changes to git
+git init -> initialized the git repository (new folder to be uploaded on git as a new repository)
+git remote add git_new_repo_link ->  (giving reference to thr repo we created locally in our system)
+git remote -v -> shows references of repositories that are connected to our local
+git branch -> list of the branchs with highlightg active branch
+git checkout -b new_branch_name -> create and checkout to new branch
+git diff -> shows the difference between two branches
+git branch -d new_branch_name -> to delete the branch
+git merge master -> merge the current active branch to master branch
+git reset -> reset the current changes after add command
+git reset HEAD~1-> reset the code changes aftercommit command
+git log ->shows the list of commit with unique hash
+git reset hash_from_log -> which need to be remove(won't delete the code)
+git reset --hard hash_from_log-> remove the particular code changes
+
+SSH -> Connect local machine to git account
+
+ssh-keygen -t rsa -b 4096 -C "email@example.com" ->  generating the SSH key
