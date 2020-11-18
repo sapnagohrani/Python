@@ -15,13 +15,13 @@ class Tree:
 
 
 # Main function implementing huffman coding
-def huffman_code_tree(node, left=True, bin_string=''):
+def huffman_code_tree(node, bin_string=''):
     if type(node) is str:
         return {node: bin_string}
     (l, r) = node.children()
     d = dict()
-    d.update(huffman_code_tree(l, True, bin_string + '0'))
-    d.update(huffman_code_tree(r, False, bin_string + '1'))
+    d.update(huffman_code_tree(l, bin_string + '0'))
+    d.update(huffman_code_tree(r, bin_string + '1'))
     return d
 
 
